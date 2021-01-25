@@ -2,13 +2,13 @@
 Created a custom interpreter for a small imperative language
 
 There are five types of tokens in our language, defined by the following regular expressions.
-  IDENIFIER=([a-z] | [A-Z])([a-z] | [A-Z] | [0-9])*
-  NUMBER=[0-9]+
-  PUNCTUATION=\+  |  \-  |  \*|  /  |  \(  |  \)  |  :=  |  ;
-  KEYWORD=if  |  then  |  else  |  endif  |  while  |  do|  endwhile  |  skip
+  IDENIFIER=([a-z] | [A-Z])([a-z] | [A-Z] | [0-9])*\
+  NUMBER=[0-9]+\
+  PUNCTUATION=\+  |  \-  |  \*|  /  |  \(  |  \)  |  :=  |  ;\
+  KEYWORD=if  |  then  |  else  |  endif  |  while  |  do|  endwhile  |  skip\
   
 Grammar of the language is defined as follows:
-  statement→basestatement{;basestatement}
+  statement→basestatement{;basestatement}\
   basestatement→assignment|ifstatement|whilestatement|skip
   assignmet→IDENTIFIER :=expression
   ifstatement→ if expression then statement else statement endif
