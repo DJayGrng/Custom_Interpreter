@@ -5,22 +5,22 @@ There are five types of tokens in our language, defined by the following regular
   IDENIFIER=([a-z] | [A-Z])([a-z] | [A-Z] | [0-9])*\
   NUMBER=[0-9]+\
   PUNCTUATION=\+  |  \-  |  \*|  /  |  \(  |  \)  |  :=  |  ;\
-  KEYWORD=if  |  then  |  else  |  endif  |  while  |  do|  endwhile  |  skip\
+  KEYWORD=if  |  then  |  else  |  endif  |  while  |  do|  endwhile  |  skip
   
 Grammar of the language is defined as follows:
   statement→basestatement{;basestatement}\
-  basestatement→assignment|ifstatement|whilestatement|skip
-  assignmet→IDENTIFIER :=expression
-  ifstatement→ if expression then statement else statement endif
-  whilestatement→ while expression do statement endwhile 
-  expression→term{+term}
-  term→factor{-factor}
-  factor→piece{/piece}
-  piece→element{*element}
+  basestatement→assignment|ifstatement|whilestatement|skip\
+  assignmet→IDENTIFIER :=expression\
+  ifstatement→ if expression then statement else statement endif\
+  whilestatement→ while expression do statement endwhile \
+  expression→term{+term}\
+  term→factor{-factor}\
+  factor→piece{/piece}\
+  piece→element{*element}\
   element→(expression)|NUMBER|IDENTIFIER
   
   
-Command to run the evaluator:
-py interpreter.py input.txt output.txt
+Command to run the evaluator:\
+<strong>py interpreter.py input.txt output.txt</strong>
 
 where input.txt is a file to be interpreted like the one shown.
