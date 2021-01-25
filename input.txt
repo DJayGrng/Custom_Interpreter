@@ -1,0 +1,12 @@
+z := 0;
+x := 7;
+y := 3+3;
+
+while x-y do
+if x - z then z := x + 1;
+else
+    y := 100 + 12 + x;
+    endif
+endwhile
+
+
